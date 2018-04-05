@@ -107,3 +107,6 @@ ENV/
 
 # Vagrant
 .vagrant/
+
+#mac os DS_Store
+.DS_Store
