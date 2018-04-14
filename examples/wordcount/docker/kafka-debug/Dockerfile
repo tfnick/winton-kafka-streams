@@ -16,4 +16,4 @@ RUN apt-get update && \
     rm /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz
 
 
-CMD ["$KAFKA_HOME/bin/kafka-console-consumer.sh","--bootstrap-server","kafka:9092","--topic","wks-wordcount-example-count","--from-beginning","--property","print.key=true"]
+CMD ["$KAFKA_HOME/bin/kafka-console-consumer.sh","--bootstrap-server","localhost:9092","--topic","wks-wordcount-example-count","--from-beginning","--property","print.key=true"]

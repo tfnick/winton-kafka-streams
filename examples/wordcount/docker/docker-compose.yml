@@ -18,21 +18,21 @@ services:
       - kafka
   kafka:
     image: "spotify/kafka"
-    hostname: kafka
+    hostname: localhost
     ports:
      - 2181:2181
      - 9092:9092
      - 7203:7203
     environment:
       - JMX_PORT=7203
-      - ADVERTISED_HOST=kafka
+      - ADVERTISED_HOST=localhost
       - ADVERTISED_PORT=9092
   kafka-manager:
     image: "sheepkiller/kafka-manager"
     ports:
      - 9000:9000
     environment:
-     - ZK_HOSTS=kafka:2181
+     - ZK_HOSTS=localhost:2181
      - APPLICATION_SECRET=letmein
   kafka-debug:
     build:
